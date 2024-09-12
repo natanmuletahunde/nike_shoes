@@ -1,29 +1,24 @@
-/* eslint-disable no-unused-vars */
-import React, { useContext } from 'react';
-import { CartContext } from './CartContext';
+import { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 
 const Cart = () => {
-  const { cartItems, removeFromCart } = useContext(CartContext); // Access cartItems and removeFromCart
+  const { cartItems, removeFromCart } = useContext(CartContext);
 
   return (
-    <div className="bg-white min-h-screen p-8">
-      <h2 className="text-4xl font-bold mb-4 text-center">Your Cart</h2>
+    <div className="container mx-auto p-8">
+      <h2 className="text-4xl font-bold mb-8 text-center">Your Cart</h2>
       {cartItems.length === 0 ? (
-        <p className="text-center text-lg">Your cart is empty.</p>
+        <p className="text-center text-xl">Your cart is empty.</p>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {cartItems.map(item => (
-            <div key={item.id} className="border p-6 rounded-lg">
-              <img
-                src={item.src}
-                alt={item.title}
-                className="w-full h-64 object-cover mb-4 rounded-lg"
-              />
-              <h3 className="text-2xl font-semibold text-center">{item.title}</h3>
-              <p className="text-center">${item.price}</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {cartItems.map((item, index) => (
+            <div key={index} className="border p-4 rounded-lg">
+              <img src={item.src} alt={item.title} className="w-full h-48 object-cover mb-4 rounded-lg" />
+              <h3 className="text-xl font-semibold">{item.title}</h3>
+              <p className="text-lg">Price: ${item.price}</p>
               <button
-                onClick={() => removeFromCart(item.id)}
-                className="bg-red-500 text-white py-2 px-4 rounded-lg mt-4 hover:bg-red-700"
+                onClick={() => removeFromCart(item)}
+                className="bg-red-500 text-white px-4 py-2 mt-4 rounded"
               >
                 Remove from Cart
               </button>
