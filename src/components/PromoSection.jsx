@@ -68,6 +68,49 @@ const PromoSection = () => {
           </button>
         </div>
       </section>
+
+      {/* Promotional Content Section */}
+      <section className="bg-white p-8 rounded-lg">
+        <div className="max-w-7xl mx-auto flex gap-8">
+          {/* First Promo Content */}
+          <div className="flex-1 mb-12">
+            <h2 className="text-4xl font-bold mb-4">Nike. Just Do It</h2>
+            <p className="text-xl mb-4">
+              Flexible Training Plans Tailored to You
+            </p>
+            <p className="text-lg mb-6">
+              With NTC, you get access to over 190 free workouts across strength, endurance, yoga and mobility.
+            </p>
+            <div className="flex space-x-4">
+              <a href="#download-ios" className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800">
+                Download iOS
+              </a>
+              <a href="#download-android" className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800">
+                Download Android
+              </a>
+            </div>
+          </div>
+          
+          {/* Second Promo Content */}
+          <div className="flex-1">
+            <h2 className="text-4xl font-bold mb-4">Nike. Just Do It</h2>
+            <p className="text-xl mb-4">
+              For Every Run
+            </p>
+            <p className="text-lg mb-6">
+              The Nike Run Club gives you the guidance, inspiration and innovation you need to become a better athlete. Join us to reach your goals and have fun along the way.
+            </p>
+            <div className="flex space-x-4">
+              <a href="#download-ios" className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800">
+                Download iOS
+              </a>
+              <a href="#download-android" className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800">
+                Download Android
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
