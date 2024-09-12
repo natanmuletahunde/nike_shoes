@@ -41,7 +41,6 @@ const PromoSection = () => {
         </div>
       </section>
 
-      {/* Second Section */}
       <section 
         className="bg-cover bg-center bg-no-repeat min-h-[100vh] flex flex-col justify-center p-8 rounded-lg"
         style={{ backgroundImage: "url('https://t4.ftcdn.net/jpg/03/91/45/63/360_F_391456310_iYbpTyVcCgjhbcnCBn3Nb2veidPKyEfX.jpg')" }}
@@ -51,9 +50,11 @@ const PromoSection = () => {
           <p className="text-xl mb-6 text-white">
             Explore a wider range of Nike shoes and gear, designed for performance and style.
           </p>
-          <button className="bg-white text-black px-6 py-3 rounded-full hover:bg-gray-300">
-            Explore More
-          </button>
+          <a href="https://www.nike.com/w/shoes-nik1" target="_blank" rel="noopener noreferrer">
+            <button className="bg-white text-black px-6 py-3 rounded-full hover:bg-gray-300">
+              Explore More
+            </button>
+          </a>
         </div>
       </section>
 
@@ -67,9 +68,11 @@ const PromoSection = () => {
           <p className="text-xl mb-6 text-white">
             Explore a wider range of Nike shoes and gear, designed for performance and style.
           </p>
-          <button className="bg-white text-black px-6 py-3 rounded-full hover:bg-gray-300">
-            Explore More
-          </button>
+          <a href="https://www.nike.com/w/running-shoes" target="_blank" rel="noopener noreferrer">
+            <button className="bg-white text-black px-6 py-3 rounded-full hover:bg-gray-300">
+              Explore More
+            </button>
+          </a>
         </div>
       </section>
 
