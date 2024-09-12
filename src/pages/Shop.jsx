@@ -1,17 +1,16 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState, useContext } from 'react';
-import axios from 'axios';
-import { CartContext } from './CartContext';
+import axios from "axios";
+import React, { useContext, useEffect, useState } from "react";
+import { CartContext } from "../context/CartContext"; // Correct import path
 
 const Shop = () => {
+  const { addToCart } = useContext(CartContext); // Access cart context
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const { addToCart } = useContext(CartContext); // Access addToCart from CartContext
-
   useEffect(() => {
-    axios.get('http://localhost:5000/images')
+    axios.get("http://localhost:5000/images")
       .then(response => {
         setImages(response.data);
         setLoading(false);
@@ -40,10 +39,10 @@ const Shop = () => {
               className="w-full h-64 object-cover mb-6 rounded-lg"
             />
             <h3 className="text-2xl font-semibold text-center">{image.title}</h3>
-            <p className="text-center">${image.price}</p>
-            <button 
-              onClick={() => addToCart(image)} 
-              className="bg-blue-500 text-white py-2 px-4 rounded-lg mt-4 hover:bg-blue-700"
+            <p className="text-lg text-center">${image.price}</p>
+            <button
+              onClick={() => addToCart(image)}
+              className="bg-blue-500 text-white px-4 py-2 mt-4 rounded hover:bg-blue-600 transition"
             >
               Add to Cart
             </button>
