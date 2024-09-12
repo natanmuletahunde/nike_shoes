@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -7,10 +7,46 @@ const Header = () => {
         <h1 className="text-2xl font-bold">Nike Shoes</h1> {/* Adjusted text size */}
         <nav>
           <ul className="flex space-x-4">
-            <li><Link to="/" className="text-lg hover:text-gray-700 transition">Home</Link></li> {/* Adjusted text size */}
-            <li><Link to="/shop" className="text-lg hover:text-gray-700 transition">Shop</Link></li> {/* Adjusted text size */}
-            <li><Link to="/about" className="text-lg hover:text-gray-700 transition">About</Link></li> {/* Adjusted text size */}
-            <li><Link to="/contact" className="text-lg hover:text-gray-700 transition">Contact</Link></li> {/* Adjusted text size */}
+            <li>
+              <NavLink 
+                to="/" 
+                className={({ isActive }) => 
+                  `text-lg transition ${isActive ? 'text-blue-600 font-bold' : 'text-gray-600 hover:text-gray-800'}`
+                }
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink 
+                to="/shop" 
+                className={({ isActive }) => 
+                  `text-lg transition ${isActive ? 'text-blue-600 font-bold' : 'text-gray-600 hover:text-gray-800'}`
+                }
+              >
+                Shop
+              </NavLink>
+            </li>
+            <li>
+              <NavLink 
+                to="/about" 
+                className={({ isActive }) => 
+                  `text-lg transition ${isActive ? 'text-blue-600 font-bold' : 'text-gray-600 hover:text-gray-800'}`
+                }
+              >
+                About
+              </NavLink>
+            </li>
+            <li>
+              <NavLink 
+                to="/contact" 
+                className={({ isActive }) => 
+                  `text-lg transition ${isActive ? 'text-blue-600 font-bold' : 'text-gray-600 hover:text-gray-800'}`
+                }
+              >
+                Contact
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </div>
