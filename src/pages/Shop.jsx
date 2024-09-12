@@ -36,7 +36,14 @@ const Shop = () => {
               alt={image.title}
               className="w-full h-64 object-cover mb-6 rounded-lg"
             />
-            <h3 className="text-2xl font-semibold text-center">{image.title}</h3>
+            <h3 className="text-2xl font-semibold text-center mb-2">{image.title}</h3>
+            <p className="text-center text-lg text-gray-700 mb-4">{image.name}</p> {/* Display the product name */}
+            <p className="text-center text-lg font-bold text-green-600 mb-4">${image.price}</p> {/* Display the product price */}
+            <button
+              className="block w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300"
+            >
+              Add to Cart
+            </button>
           </div>
         ))}
       </div>
