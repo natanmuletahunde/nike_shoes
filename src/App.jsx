@@ -1,14 +1,25 @@
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import PromoSection from './components/PromoSection';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import Shop from './pages/Shop';
+import Contact from './components/Contact';
 
 function App() {
   return (
-    <div>
-      <Header />
-      <PromoSection />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
