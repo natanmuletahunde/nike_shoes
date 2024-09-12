@@ -1,16 +1,17 @@
 /* eslint-disable no-unused-vars */
-import axios from "axios";
-import React, { useContext, useEffect, useState } from "react";
-import { CartContext } from "../context/CartContext"; // Correct import path
+import axios from 'axios';
+import React, { useContext, useEffect, useState } from 'react';
+import { CartContext } from '../context/CartContext';
 
 const Shop = () => {
-  const { addToCart } = useContext(CartContext); // Access cart context
+  const { cart, addToCart, removeFromCart } = useContext(CartContext);
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [buttonStates, setButtonStates] = useState({});
 
   useEffect(() => {
-    axios.get("http://localhost:5000/images")
+    axios.get('http://localhost:5000/images')
       .then(response => {
         setImages(response.data);
         setLoading(false);
@@ -20,6 +21,22 @@ const Shop = () => {
         setLoading(false);
       });
   }, []);
+
+  const handleAddToCart = (item) => {
+    addToCart(item);
+    setButtonStates(prevState => ({
+      ...prevState,
+      [item.id]: 'added',
+    }));
+  };
+
+  const handleRemoveFromCart = (item) => {
+    removeFromCart(item);
+    setButtonStates(prevState => ({
+      ...prevState,
+      [item.id]: 'removed',
+    }));
+  };
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error loading images</div>;
@@ -40,12 +57,26 @@ const Shop = () => {
             />
             <h3 className="text-2xl font-semibold text-center">{image.title}</h3>
             <p className="text-lg text-center">${image.price}</p>
-            <button
-              onClick={() => addToCart(image)}
-              className="bg-blue-500 text-white px-4 py-2 mt-4 rounded hover:bg-blue-600 transition"
-            >
-              Add to Cart
-            </button>
+
+            {cart.find(cartItem => cartItem.id === image.id) ? (
+              <button
+                onClick={() => handleRemoveFromCart(image)}
+                className="bg-red-500 text-white px-4 py-2 mt-4 rounded hover:bg-red-600 transition"
+              >
+                Remove from Cart
+              </button>
+            ) : (
+              <button
+                onClick={() => handleAddToCart(image)}
+                className={`px-4 py-2 mt-4 rounded transition ${
+                  buttonStates[image.id] === 'added'
+                    ? 'bg-green-500 text-white'
+                    : 'bg-blue-500 text-white hover:bg-blue-600'
+                }`}
+              >
+                {buttonStates[image.id] === 'added' ? 'Added to Cart' : 'Add to Cart'}
+              </button>
+            )}
           </div>
         ))}
       </div>
