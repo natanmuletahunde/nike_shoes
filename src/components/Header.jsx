@@ -47,6 +47,16 @@ const Header = () => {
                 Contact
               </NavLink>
             </li>
+            <li>
+              <NavLink 
+                to="/cart" 
+                className={({ isActive }) => 
+                  `text-lg transition ${isActive ? 'text-blue-600 font-bold' : 'text-gray-600 hover:text-gray-800'}`
+                }
+              >
+                Cart
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </div>
