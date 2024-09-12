@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header className="bg-white text-black p-4 shadow-md">
+    <header className="bg-white text-black p-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <h1 className="text-2xl font-bold">Nike Shoes</h1> {/* Adjusted text size */}
         <nav>
