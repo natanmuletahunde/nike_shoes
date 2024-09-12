@@ -17,7 +17,7 @@ const PromoSection = () => {
       {/* Images Section */}
       <div className="grid grid-cols-3 gap-x-6">
         <img
-          src="https://example.com/image1.jpg" // Replace with actual image URLs
+          src="https://cdn.pixabay.com/photo/2016/11/19/18/06/feet-1840619_640.jpg" 
           alt="Nike Shoe 1"
           className="w-full rounded-lg"
         />
@@ -27,7 +27,7 @@ const PromoSection = () => {
           className="w-full rounded-lg"
         />
         <img
-          src="https://t4.ftcdn.net/jpg/03/91/45/63/360_F_391456310_iYbpTyVcCgjhbcnCBn3Nb2veidPKyEfX.jpg" // Replace with actual image URLs
+          src="https://t4.ftcdn.net/jpg/03/91/45/63/360_F_391456310_iYbpTyVcCgjhbcnCBn3Nb2veidPKyEfX.jpg" 
           alt="Nike Shoe 3"
           className="w-full rounded-lg"
         />
