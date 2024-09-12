@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
+// src/context/CartContext.js
+
 import React, { createContext, useState } from 'react';
 
 export const CartContext = createContext();
@@ -8,13 +10,11 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   const addToCart = (item) => {
-    if (!cart.find(cartItem => cartItem.id === item.id)) {
-      setCart([...cart, item]);
-    }
+    setCart(prevCart => [...prevCart, item]);
   };
 
   const removeFromCart = (item) => {
-    setCart(cart.filter(cartItem => cartItem.id !== item.id));
+    setCart(prevCart => prevCart.filter(cartItem => cartItem.id !== item.id));
   };
 
   return (
