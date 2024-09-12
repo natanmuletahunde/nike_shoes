@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const PromoSection = () => {
   return (
     <div className="p-8 space-y-16"> {/* Wrapper for spacing between sections */}
@@ -6,15 +8,17 @@ const PromoSection = () => {
         className="bg-cover bg-center bg-no-repeat min-h-[100vh] flex flex-col justify-between p-8 rounded-lg"
         style={{ backgroundImage: "url('https://media.gq.com/photos/63eba1b2275d2fef78a425c2/master/pass/nike-running-shoes-streakfly-invincible.jpg')" }}
       >
-        {/* First Promo Section */}
-        <div className="bg-black bg-opacity-50 p-10 rounded-lg text-center mb-8 w-full">
+          {/* First Promo Section */}
+          <div className="bg-black bg-opacity-50 p-10 rounded-lg text-center mb-8 w-full">
           <h1 className="text-6xl font-bold mb-6 text-white">Nike Shoes Promotion</h1>
           <p className="text-xl mb-6 text-white">
             Experience the latest collection of Nike shoes designed for athletes and casual wear.
           </p>
-          <button className="bg-white text-black px-6 py-3 rounded-full hover:bg-gray-300">
-            Shop Now
-          </button>
+          <Link to="/shop">
+            <button className="bg-white text-black px-6 py-3 rounded-full hover:bg-gray-300">
+              Shop Now
+            </button>
+          </Link>
         </div>
 
         {/* Images Section */}
