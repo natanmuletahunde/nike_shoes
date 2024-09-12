@@ -6,10 +6,10 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4">Resources</h3>
           <ul className="space-y-2">
-            <li><a href="#find-a-store" className="hover:text-gray-600">Find a Store</a></li>
-            <li><a href="#help" className="hover:text-gray-600">Help</a></li>
-            <li><a href="#returns" className="hover:text-gray-600">Returns</a></li>
-            <li><a href="#contact-us" className="hover:text-gray-600">Contact Us</a></li>
+            <li><a href="https://www.nike.com/help" className="hover:text-gray-600" target="_blank" rel="noopener noreferrer">Help</a></li>
+            <li><a href="https://www.nike.com/returns" className="hover:text-gray-600" target="_blank" rel="noopener noreferrer">Returns</a></li>
+            <li><a href="https://www.nike.com/contact" className="hover:text-gray-600" target="_blank" rel="noopener noreferrer">Contact Us</a></li>
+            <li><a href="https://www.nike.com/find-a-store" className="hover:text-gray-600" target="_blank" rel="noopener noreferrer">Find a Store</a></li>
           </ul>
         </div>
         
@@ -17,11 +17,11 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4">Company</h3>
           <ul className="space-y-2">
-            <li><a href="#about-nike" className="hover:text-gray-600">About Nike</a></li>
-            <li><a href="#news" className="hover:text-gray-600">News</a></li>
-            <li><a href="#careers" className="hover:text-gray-600">Careers</a></li>
-            <li><a href="#investors" className="hover:text-gray-600">Investors</a></li>
-            <li><a href="#sustainability" className="hover:text-gray-600">Sustainability</a></li>
+            <li><a href="https://www.nike.com/about" className="hover:text-gray-600" target="_blank" rel="noopener noreferrer">About Nike</a></li>
+            <li><a href="https://news.nike.com/" className="hover:text-gray-600" target="_blank" rel="noopener noreferrer">News</a></li>
+            <li><a href="https://jobs.nike.com/" className="hover:text-gray-600" target="_blank" rel="noopener noreferrer">Careers</a></li>
+            <li><a href="https://investors.nike.com/" className="hover:text-gray-600" target="_blank" rel="noopener noreferrer">Investors</a></li>
+            <li><a href="https://www.nike.com/sustainability" className="hover:text-gray-600" target="_blank" rel="noopener noreferrer">Sustainability</a></li>
           </ul>
         </div>
       </div>
