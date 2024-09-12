@@ -7,8 +7,8 @@ const PromoSection = () => {
       >
         {/* First Promo Section */}
         <div className="bg-black bg-opacity-50 p-10 rounded-lg text-center mb-8 w-full">
-          <h1 className="text-6xl font-bold mb-6">Nike Shoes Promotion</h1>
-          <p className="text-xl mb-6">
+          <h1 className="text-6xl font-bold mb-6 text-white">Nike Shoes Promotion</h1>
+          <p className="text-xl mb-6 text-white">
             Experience the latest collection of Nike shoes designed for athletes and casual wear.
           </p>
           <button className="bg-white text-black px-6 py-3 rounded-full hover:bg-gray-300">
@@ -36,14 +36,13 @@ const PromoSection = () => {
         </div>
       </section>
 
-     
+      {/* Second Section */}
       <section className="bg-cover bg-center bg-no-repeat min-h-screen flex flex-col justify-center p-8 rounded-lg"
         style={{ backgroundImage: "url('https://t4.ftcdn.net/jpg/03/91/45/63/360_F_391456310_iYbpTyVcCgjhbcnCBn3Nb2veidPKyEfX.jpg')" }}
       >
-     
         <div className="bg-black bg-opacity-50 p-10 rounded-lg text-center w-full">
-          <h2 className="text-5xl font-bold mb-6">Discover More Nike Products</h2>
-          <p className="text-xl mb-6">
+          <h2 className="text-5xl font-bold mb-6 text-white">Discover More Nike Products</h2>
+          <p className="text-xl mb-6 text-white">
             Explore a wider range of Nike shoes and gear, designed for performance and style.
           </p>
           <button className="bg-white text-black px-6 py-3 rounded-full hover:bg-gray-300">
@@ -51,6 +50,22 @@ const PromoSection = () => {
           </button>
         </div>
       </section>
+
+      {/* Third Section */}
+      <section className="bg-cover bg-center bg-no-repeat min-h-screen flex flex-col justify-center p-8 rounded-lg"
+        style={{ backgroundImage: "url('https://blog.atome.sg/wp-content/uploads/2022/04/Nike-running-shoes.jpg')" }}
+      >
+        <div className="bg-black bg-opacity-50 p-10 rounded-lg text-center w-full">
+          <h2 className="text-5xl font-bold mb-6 text-white">Find Your Perfect Running Shoe</h2>
+          <p className="text-xl mb-6 text-white">
+            Explore a wider range of Nike shoes and gear, designed for performance and style.
+          </p>
+          <button className="bg-white text-black px-6 py-3 rounded-full hover:bg-gray-300">
+            Explore More
+          </button>
+        </div>
+      </section>
+      
     </div>
   );
 };
