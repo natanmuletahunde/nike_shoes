@@ -2,7 +2,8 @@ const PromoSection = () => {
   return (
     <div className="p-8 space-y-16"> {/* Wrapper for spacing between sections */}
       {/* First Section */}
-      <section className="bg-cover bg-center bg-no-repeat min-h-screen flex flex-col justify-between p-8 rounded-lg"
+      <section 
+        className="bg-cover bg-center bg-no-repeat min-h-[100vh] flex flex-col justify-between p-8 rounded-lg"
         style={{ backgroundImage: "url('https://media.gq.com/photos/63eba1b2275d2fef78a425c2/master/pass/nike-running-shoes-streakfly-invincible.jpg')" }}
       >
         {/* First Promo Section */}
@@ -21,23 +22,24 @@ const PromoSection = () => {
           <img
             src="https://cdn.pixabay.com/photo/2016/11/19/18/06/feet-1840619_640.jpg"
             alt="Nike Shoe 1"
-            className="w-full rounded-lg"
+            className="w-full h-full object-cover rounded-lg" // Ensure full visibility of images
           />
           <img
             src="https://hips.hearstapps.com/hmg-prod/images/index-bomber-65a839208f31a.jpg"
             alt="Nike Shoe 2"
-            className="w-full rounded-lg"
+            className="w-full h-full object-cover rounded-lg" // Ensure full visibility of images
           />
           <img
             src="https://t4.ftcdn.net/jpg/03/91/45/63/360_F_391456310_iYbpTyVcCgjhbcnCBn3Nb2veidPKyEfX.jpg"
             alt="Nike Shoe 3"
-            className="w-full rounded-lg"
+            className="w-full h-full object-cover rounded-lg" // Ensure full visibility of images
           />
         </div>
       </section>
 
       {/* Second Section */}
-      <section className="bg-cover bg-center bg-no-repeat min-h-screen flex flex-col justify-center p-8 rounded-lg"
+      <section 
+        className="bg-cover bg-center bg-no-repeat min-h-[100vh] flex flex-col justify-center p-8 rounded-lg"
         style={{ backgroundImage: "url('https://t4.ftcdn.net/jpg/03/91/45/63/360_F_391456310_iYbpTyVcCgjhbcnCBn3Nb2veidPKyEfX.jpg')" }}
       >
         <div className="bg-black bg-opacity-50 p-10 rounded-lg text-center w-full">
@@ -52,7 +54,8 @@ const PromoSection = () => {
       </section>
 
       {/* Third Section */}
-      <section className="bg-cover bg-center bg-no-repeat min-h-screen flex flex-col justify-center p-8 rounded-lg"
+      <section 
+        className="bg-cover bg-center bg-no-repeat min-h-[100vh] flex flex-col justify-center p-8 rounded-lg"
         style={{ backgroundImage: "url('https://blog.atome.sg/wp-content/uploads/2022/04/Nike-running-shoes.jpg')" }}
       >
         <div className="bg-black bg-opacity-50 p-10 rounded-lg text-center w-full">
@@ -65,7 +68,6 @@ const PromoSection = () => {
           </button>
         </div>
       </section>
-      
     </div>
   );
 };
